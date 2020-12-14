@@ -21,7 +21,8 @@ export class AppService {
         this.http.post('login', params.toString(), {headers: headers}).subscribe(response => {
             this.authenticated = true;
             if (callback) { callback(); }
-        }, () => {
+        }, (error) => {
+			console.log(error);
           this.authenticated = false;
         });
 

@@ -40,7 +40,7 @@ public class GatewayApplication {
   }
 
   @Configuration
-  @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+  @Order(SecurityProperties.BASIC_AUTH_ORDER)
   protected static class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
